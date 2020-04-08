@@ -13,5 +13,8 @@ export const config: Config = {
       serviceWorker: null,
       baseUrl: 'https://myapp.local/'
     }
-  ]
+  ],
+	extras: {
+		cloneNodeFix: true,
+	},
 };

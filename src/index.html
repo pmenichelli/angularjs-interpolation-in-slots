@@ -23,13 +23,17 @@
   <app-root></app-root>
 
   <div ng-app="todoApp">
+
     <div ng-controller="TodoListController as todoList">
+      <h1>{{todoList.title}}</h1>
+
       <button ng-click="todoList.show = true">Show</button>
       <button ng-click="todoList.show = false">hide</button>
 
       <div ng-if="todoList.show === true">
         <outter-component name='test name'>
-          <span>Hi there!</span>
+          <h2>Hi there!</h2>
+          <div>{{todoList.description}}</div>
         </outter-component>
       </div>
     </div>
@@ -40,6 +44,8 @@
       .controller('TodoListController', function() {
         var todoList = this;
         todoList.show = false;
+        todoList.title = 'Main title';
+        todoList.description = 'lorem ipsum';
       });
   </script>
 </body>
