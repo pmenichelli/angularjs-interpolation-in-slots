@@ -11,7 +11,7 @@
 
   <script type="module" src="/build/app.esm.js"></script>
   <script nomodule src="/build/app.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
   <link href="/build/app.css" rel="stylesheet">
 
   <link rel="apple-touch-icon" href="/assets/icon/icon.png">
@@ -36,6 +36,16 @@
           <div>{{todoList.description}}</div>
         </outter-component>
       </div>
+
+
+      <!-- it does work with ng-hide -->
+
+      <!-- <div ng-hide="todoList.show === false">
+        <outter-component name='test name'>
+          <h2>Hi there!</h2>
+          <div>{{todoList.description}}</div>
+        </outter-component>
+      </div> -->
     </div>
   </div>
 
