@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Stencil Starter App</title>
+  <meta name="Description" content="Welcome to the Stencil App Starter. You can use this starter to build entire apps all with web components using Stencil!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#16161d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="x-ua-compatible" content="IE=Edge">
+
+  <script type="module" src="/build/app.esm.js"></script>
+  <script nomodule src="/build/app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <link href="/build/app.css" rel="stylesheet">
+
+  <link rel="apple-touch-icon" href="/assets/icon/icon.png">
+  <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+
+  <app-root></app-root>
+
+  <div ng-app="todoApp">
+    <div ng-controller="TodoListController as todoList">
+      <button ng-click="todoList.show = true">Show</button>
+      <button ng-click="todoList.show = false">hide</button>
+
+      <div ng-if="todoList.show === true">
+        <outter-component name='test name'>
+          <span>Hi there!</span>
+        </outter-component>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    angular.module('todoApp', [])
+      .controller('TodoListController', function() {
+        var todoList = this;
+        todoList.show = false;
+      });
+  </script>
+</body>
+</html>
