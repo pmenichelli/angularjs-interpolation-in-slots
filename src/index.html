@@ -31,10 +31,7 @@
       <button ng-click="todoList.show = false">hide</button>
 
       <div ng-if="todoList.show === true">
-        <outter-component name='test name'>
-          <h2>Hi there!</h2>
-          <div>{{todoList.description}}</div>
-        </outter-component>
+          <ng-include src="'assets/someTemplate.html'"></ng-include>
       </div>
 
 
